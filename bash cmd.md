@@ -1,4 +1,4 @@
-```shell 
+```shell
 ls
     -a (all)
     -l (list)
@@ -22,20 +22,24 @@ mkdir (make directory)
 
 ```
 
-```shell 
-for i in {begin..end..hop}
+```shell
+for i in {1..99..2}
+do
+done
+
+for (( i=1; i<=$n; i++))
 do
 done
 ```
 
-```shell 
+```shell
 if [[ ]]
 then
 else
 fi
 ```
 
-```shell 
+```shell
 compare number:
 - if [[ $a -eq $b ]]
 - if [[ $a -ne $b ]]
@@ -49,7 +53,7 @@ compare number:
 - if (( $a >= $b ))
 ```
 
-```shell 
+```shell
 compare string
 - if [[ $x == [yY] ]]
 - if [[ $x != $y ]]
@@ -58,4 +62,49 @@ compare string
 - if [[ $x == "y" ]]
 - if [[ $x == z* ]]
 - if [[ $x == "z*" ]]
+```
+
+```shell
+Operations
+echo "5/2" | bc -l
+echo $((5/2))
+echo "scale=2; 100/3" | bc
+let "count=$count+1"
+```
+
+```shell
+text processing
+
+cut -f -d
+cut -c7
+cut -c1-3
+
+head -n
+head -c
+
+tail -n+K
+tail -c+K
+
+echo "Hello" | tr "e" "E"
+ => HEllo
+echo "Hello how are you" | tr " " '-'
+ => Hello-how-are-you
+echo "Hello how are you 1234" | tr -d [0-9]
+ => Hello how are you
+tr a-z A-Z
+tr [:space:] '\t'
+tr -d [:digit:]
+tr "[([]" "[)]]"
+tr -s " "
+tr -s "\n"
+
+sort
+sort -n
+sort -r
+sort -k 2
+sort -k 2 -t $'\t'
+
+uniq
+uniq -c
+uniq -d
 ```
