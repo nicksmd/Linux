@@ -84,6 +84,8 @@ head -c
 
 tail -n+K
 tail -c+K
+tail -c4
+tail -n4
 
 echo "Hello" | tr "e" "E"
  => HEllo
