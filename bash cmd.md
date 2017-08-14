@@ -30,6 +30,10 @@ done
 for (( i=1; i<=$n; i++))
 do
 done
+
+while
+do
+done
 ```
 
 ```shell
@@ -84,8 +88,6 @@ head -c
 
 tail -n+K
 tail -c+K
-tail -c4
-tail -n4
 
 echo "Hello" | tr "e" "E"
  => HEllo
@@ -105,8 +107,31 @@ sort -n
 sort -r
 sort -k 2
 sort -k 2 -t $'\t'
+sort | uniq
+sort -u
 
 uniq
-uniq -c
-uniq -d
+uniq -c (count)
+uniq -d (get only duplicate value)
+uniq -i (case insensitive)
+uniq -u (get only unique value)
+
+```
+
+```shell
+a[i]=$x
+echo ${a[@]}
+echo ${a[0]}
+echo ${#a[@]}
+declare -a array=(1 2 3)
+a=($(cat))
+```
+
+```shell
+grep -i (case insensitive)
+grep -w (match only word)
+grep -v (invert match)
+
+sed 's/abc /xyz/gi'
+sed 's/abc/{&}/gi'
 ```
